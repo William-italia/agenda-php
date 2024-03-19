@@ -8,7 +8,7 @@
         <!-- card contacts -->
         <div class="flex flex-col items-center justify-center ">
             <h1 class="text-4xl  font-medium mb-6">Minha Agenda</h1>
-            <div class="w-full md:w-[800px] flex flex-col items-center my-6 h-[500px] overflow-auto relative">
+            <div class="w-full md:w-[800px] flex flex-col items-center my-6 md:h-[500px] md:overflow-auto ">
                 <?php if(count($contacts) > 0): ?>
                     <table id="contacts-table" class="w-full  divide-y divide-gray-200 ">
                         <thead class="bg-slate-800 text-white ">
