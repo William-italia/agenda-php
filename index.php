@@ -7,7 +7,7 @@
         <?php endif; ?>
         <!-- card contacts -->
         <div class="flex flex-col items-center justify-center ">
-            <h1 class="text-4xl  font-mediu mb-6">Minha Agenda</h1>
+            <h1 class="text-4xl  font-medium mb-6">Minha Agenda</h1>
             <div class="w-full md:w-[800px] flex flex-col items-center p-6">
                 <?php if(count($contacts) > 0): ?>
                     <table id="contacts-table" class="w-full  divide-y divide-gray-200">
@@ -28,7 +28,7 @@
                                     <td class="px-6 py-4 text-left text-xl tracking-wider"><?= $contact['phone']?></td>
 
                                     <td class="actions ">
-                                        <a href="#" class=" fas fa-eye check-ico text-green-600 text-right mr-3"></a>
+                                        <a type="$_GET" href="<?php $BASE_URL ?>show.php?id=<?= $contact['id'] ?>" class=" fas fa-eye check-ico text-green-600 text-right mr-3"></a>
                                         <a href="#" class="far fa-edit edit-ico text-cyan-600 text-right mr-3"></a>   
                                         <button type="submit" class="text-right"><i class="fas fa-times delete-icon text-red-600"></i></button>
                                     </td>
