@@ -1,7 +1,13 @@
 <?php
 
 include_once("config/url.php");
+include_once("config/connection.php");
+include_once("config/process.php");
 
+if(isset($_SESSION['msg'])) {
+    $printMsg = $_SESSION['msg'];
+    $_SESSION['msg'] = '';
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -15,6 +21,19 @@ include_once("config/url.php");
     <link rel="stylesheet" href="<?php $BASE_URL ?>assets/css/output.css">
 </head>
 <body>
-    
+    <!-- menu -->
+    <div class="relative  p-6 bg-slate-800 text-white">
+        <!-- flex items -->
+        <div class="flex items-center justify-between">
+            <!-- flex container for logo/menu -->
+            <div class="flex items-center space-x-20">
+                <a href="<?php $BASE_URL ?>index.php"><i class="fa-solid fa-book-bookmark fa-2xl text-white"></i></a>
+            <div class="space-x-8 font-bold ">
+                <a id="home-link" class="cursor-pointer hover:text-slate-400 transition-colors duration-500" href="<?php $BASE_URL ?>index.php">Agenda</a>
+                <a id="home-link" class="cursor-pointer hover:text-slate-400 transition-colors duration-500" href="<?php $BASE_URL ?>create.php">Adicionar contato</a>
+            </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
