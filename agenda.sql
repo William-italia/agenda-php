@@ -1,5 +1,5 @@
 CREATE DATABASE agenda;
-drop table contacts;
+
 CREATE TABLE contacts(
 	id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(150),
