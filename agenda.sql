@@ -16,3 +16,4 @@ INSERT INTO contacts (name, phone, observations) VALUES
 ('Pedro', '(13)98765432', 'cliente antigo'),
 ('Laura', '(13)98765432', 'Antigo cliente, às vezes pede grandes quantidades.');
 
+    
