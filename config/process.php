@@ -14,14 +14,14 @@ if (!empty($data)) {
     if ($data["type"] === "create") {
         $name = $data["name"];
         $telefone = $data["telefone"];
-        $observation = $data["observation"];
+        $observations = $data["observations"];
 
         $query = "INSERT INTO contacts(name, phone, observations) VALUES (:name, :telefone, :observation)";
         $stmt = $conn->prepare($query);
 
         $stmt->bindParam(":name", $name);
         $stmt->bindParam(":telefone", $telefone);
-        $stmt->bindParam(":observation", $observation);
+        $stmt->bindParam(":observation", $observations);
 
         try {
             $stmt->execute();
